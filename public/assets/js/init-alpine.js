@@ -48,15 +48,28 @@ function data() {
       this.isPagesMenuOpen = !this.isPagesMenuOpen
     },
     // Modal
+    isModalOpenadduser: false,
+    trapCleanupadduser: null,
+    openModaladduser() {
+      this.isModalOpenadduser = true
+      this.trapCleanupadduser = focusTrap(document.querySelector('#modal'))
+    },
+    closeModaladduser() {
+      this.isModalOpenadduser = false
+      this.trapCleanupadduser()
+    },
     isModalOpen: false,
     trapCleanup: null,
     openModal() {
       this.isModalOpen = true
-      this.trapCleanup = focusTrap(document.querySelector('#modal'))
+      this.trapCleanup = focusTrap(document.querySelector('#permisssion'))
     },
     closeModal() {
       this.isModalOpen = false
       this.trapCleanup()
     },
   }
+  
 }
+
+
