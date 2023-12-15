@@ -7,6 +7,7 @@
   <title>Windmill Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+<link rel="stylesheet" href="./assets/css/custom.css">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -330,42 +331,50 @@
       </header>
       <main class="h-full overflow-y-auto">
         <div class="container px-6 mx-auto grid">
-          <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Dashboard
-          </h2>
-
+          <div class="flex justify-between items-center">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+              Dashboard
+            </h2>
+             <div class="refresh">
+              <button class="w-12 h-12 rounded-full shadow-md text-center flex justify-center items-center
+              bg-blue-100 hover:bg-red-500 text-white">
+                <svg class="w-5 h-5 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#0f3ec2">
+                  <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+              </svg>
+          
+              </button>
+             </div>
+          </div>
+          
           <!-- Cards -->
           <div>
-            <div class="flex  mb-6">
+            <div class="w-full mb-6">
               <form action="">
-                <div class=" flex space-x-3 ">
-                  <label class="block mt-4 text-sm ">
+                <div class="flex space-x-3 w-full ">
+                  <label class="w-full block mt-4 text-sm flex justify-between space-x-3 items-center">
                     <span class="text-gray-700 dark:text-gray-400">
                       Date
                     </span>
                     <input name="datetimes" value="01/01/2018 - 01/15/2018"
-                      class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                      placeholder=" date end">
-
+                      class="w-full block mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                      placeholder="date end">
                   </label>
-                  <label class="block mt-4 text-sm w-56">
+                  <label class="w-full block mt-4 text-sm flex justify-between space-x-3 items-center">
                     <span class="text-gray-700 dark:text-gray-400">
                       Enterprise
                     </span>
-                    <select
-                      class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                    <select class="w-full block mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                       <option>Enterprise</option>
                       <option>Enterprise</option>
                       <option>Enterprise</option>
                       <option>Enterprise</option>
                     </select>
                   </label>
-                  <label class="block mt-4 text-sm w-56">
+                  <label class="w-full block mt-4 text-sm flex justify-between space-x-3 items-center">
                     <span class="text-gray-700 dark:text-gray-400">
                       State
                     </span>
-                    <select
-                      class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                    <select class="w-full block mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                       <option>State</option>
                       <option>State</option>
                       <option>State</option>
@@ -373,12 +382,9 @@
                     </select>
                   </label>
                 </div>
-
-
               </form>
-
-
             </div>
+            
           </div>
           <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
             <div class="grid gap-6  md:grid-cols-2 xl:grid-cols-2">
@@ -471,25 +477,23 @@
 
           <div>
               <!-- Card -->
-              <div class="p-4 bg-white rounded-lg shadow-xs text-center">
-                <div class="flex items-center justify-center dark:bg-gray-800">
-                  <div class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-lightning-charge" viewBox="0 0 16 16">
-                      <path
-                        d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z" />
+              <div class="p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 text-center relative">
+                <div class="wrapper-center">
+                  <div class="progress-bar">
+                    <svg class="progress" data-progress="10" x="0px" y="0px" viewBox="0 0 80 80">
+                      <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+                      <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+                      <text class="value" x="50%" y="55%">0%</text>
+                      <text class="text" x="50%" y="115%">HTML</text>
                     </svg>
                   </div>
-                  <div>
-                  
-                  </div>
                 </div>
-                <h2 class="mb-2 text-2xl font-medium text-gray-600 dark:text-gray-400">
-                  Power Saved <br> This Week
-                </h2>
-                <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  35
+                
+                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+              Power Saved This week
                 </p>
+            
+                
               </div>
         
           </div>
@@ -609,6 +613,21 @@
     });
 
   </script>
+<script>
+  var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]);
+    }
+  };
+  window.onload = function(){
+    var max = -219.99078369140625;
+    forEach(document.querySelectorAll('.progress'), function (index, value) {
+    percent = value.getAttribute('data-progress');
+      value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
+      value.querySelector('.value').innerHTML = percent + '%';
+    });
+  }
+</script>
 </body>
 
 </html>
