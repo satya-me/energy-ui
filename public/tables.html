@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="./assets/js/init-alpine.js"></script>
-
+ 
+  <link rel="stylesheet" href="./assets/css/custom.css" />
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
 </head>
 
 <body>
@@ -524,19 +527,7 @@
                   <option>Gateway Id</option>
                 </select>
               </label>
-              <label class="block mt-4 text-sm w-56">
-                <span class="text-gray-700 dark:text-gray-400">
-                Time Interval
-                </span>
-                <select
-                  class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                >
-                  <option>1s</option>
-                  <option>5s</option>
-                  <option>1hr</option>
-                  <option>2hr</option>
-                </select>
-              </label>
+            
               
              <div>
 
@@ -567,233 +558,555 @@
             </div>
           </form>
             <div class="w-full overflow-x-auto">
-              <table class="w-full whitespace-no-wrap">
-                <thead>
-                  <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                    <th class="px-4 py-3">CUSTOMER</th>
-                    <th class="px-4 py-3">GATEWAY ID</th>
-                    <th class="px-4 py-3">DATES</th>
-                    <th class="px-4 py-3">KWH</th>
-                    <th class="px-4 py-3">KVAH</th>
-                    <th class="px-4 py-3">PF</th>
-
-                  </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">Hans Burger</p>
-
-                        </div>
+           <!-- tab -->
+           <div class="w-2/3">
+            <div class="relative right-0">
+              <ul
+                class="relative flex flex-wrap p-1 list-none rounded-xl bg-blue-gray-50/60"
+                data-tabs="tabs"
+                role="list"
+              >
+                <li class="z-30 flex-auto text-center">
+                  <a
+                    class="z-30 flex items-center justify-center w-full px-3 py-1 mb-0  transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
+                    data-tab-target=""
+                    active=""
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="matadeta"
+                  >
+                    <span class="ml-1 ">Mater Data</span>
+                  </a>
+                </li>
+              
+                <li class="z-30 flex-auto text-center ">
+                  <a
+                    class="z-30 flex items-center justify-center w-full px-3 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
+                    data-tab-target=""
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="devicedata"
+                  >
+                    <span class="ml-1">Device Data</span>
+                  </a>
+                </li>
+              </ul>
+              <div data-tab-content="" class=" px-2 py-4">
+                <div class="block opacity-100" id="matadeta" role="tabpanel">
+                  <div class="flex justify-between items-center">
+                    <div class="w-56 flex justify-between items-center ">
+                      <h4 class="classtitle mr-4">
+                        Interval 
+                       </h4>
+                       <select
+                       class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                     >
+                       <option>1s</option>
+                       <option>5s</option>
+                       <option>1hr</option>
+                       <option>2hr</option>
+                     </select>
                       </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                     NGCS2023011003
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      6/10/2020
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-                            0.24KWH</p>
+                     <div class="download_btn">
+                       <button type="button" class="py-2 px-3 mt-2 focus:outline-none text-white rounded-lg   ">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg>
+                       </button>
+                     </div>
+                  </div>
+                  <!-- table data -->
+                  <table class="w-full whitespace-no-wrap">
+                    <thead>
+                      <tr
+                        class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                        <th class="px-4 py-3">Enterprise
+                        </th>
+                        <th class="px-4 py-3">State
+                        </th>
+                        <th class="px-4 py-3">Location
+                        </th>
+                        <th class="px-4 py-3">Gateway ID
+                        </th>
+                        <th class="px-4 py-3">Date
+                        </th>
+                        <th class="px-4 py-3">Time
+                        </th>
+                        <th class="px-4 py-3">KWH
 
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
+                        </th>
+                        <th class="px-4 py-3">KVAH
+                        </th>
+                        <th class="px-4 py-3">PF
+                        </th>
+                        <th class="px-4 py-3">Ph1Voltage
+                        </th>
+                        <th class="px-4 py-3">Ph1Current
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                      <tr class="text-gray-700 dark:text-gray-400">
+                        <td class="px-4 py-3 text-sm">
+                          <input
+                    type="checkbox"
+                    class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                  />
+                  <span class="ml-2">
+                    <span class="">SBI</span>
+                  </span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          Telangana
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          vainad
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          123456
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          10-01-2024
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          12:00 PM
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full"
+                                src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+                                0.24KWH</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24KVAH</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-gray-700 dark:text-gray-400">
+                        <td class="px-4 py-3 text-sm">
+                          <input
+                    type="checkbox"
+                    class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                  />
+                  <span class="ml-2">
+                    <span class="">SBI</span>
+                  </span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          Telangana
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          vainad
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          123456
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          10-01-2024
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          12:00 PM
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full"
+                                src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+                                0.24KWH</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24KVAH</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                loading="lazy" />
+                              <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                0.24PF</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                   
+                    </tbody>
+                  </table>
+                  
+                </div>
 
-                            0.24KVAH</p>
 
+                <!-- device data -->
+                
+                <div class="hidden opacity-0" id="devicedata" role="tabpanel">
+                 
+                    <div class="flex justify-between items-center">
+                      <div class="w-56 flex justify-between items-center ">
+                        <h4 class="classtitle mr-4">
+                          Interval 
+                         </h4>
+                         <select
+                         class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                       >
+                         <option>1s</option>
+                         <option>5s</option>
+                         <option>1hr</option>
+                         <option>2hr</option>
+                       </select>
                         </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
+                     
+                       <div class="download_btn">
+                         <button type="button" class="py-2 px-3 mt-2 focus:outline-none text-white rounded-lg   ">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg>
+                         </button>
+                       </div>
+                    </div>
+                   <!-- table data -->
+                   <table class="w-full whitespace-no-wrap">
+                    <thead>
+                      <tr
+                        class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                        <th class="px-4 py-3">Enterprise
+                        </th>
+                        <th class="px-4 py-3">State
+                        </th>
+                        <th class="px-4 py-3">Location
+                        </th>
+                        <th class="px-4 py-3">Gateway ID
+                        </th>
+                        <th class="px-4 py-3">Date
+                        </th>
+                        <th class="px-4 py-3">Time
+                        </th>
+                        <th class="px-4 py-3">Status
+                        </th>
+                        <th class="px-4 py-3">Grill temp
+                        </th>
+                        <th class="px-4 py-3">Room temp
+                        </th>
+                        <th class="px-4 py-3">Humidity
+                        </th>
+                        <th class="px-4 py-3">Mode
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                      <tr class="text-gray-700 dark:text-gray-400">
+                        <td class="px-4 py-3 text-sm">
+                          <input
+                    type="checkbox"
+                    class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                  />
+                  <span class="ml-2">
+                    <span class="">SBI</span>
+                  </span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          Telangana
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          vainad
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          123456
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          10-01-2024
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          12:00 PM
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden w-4 h-4 mr-2 rounded-full md:block">
+                             <div class="online"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+                              Online</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fb3b1f" class="bi bi-thermometer" viewBox="0 0 16 16">
+                                <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+                                <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0M6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15z"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                23</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fb3b1f" class="bi bi-thermometer" viewBox="0 0 16 16">
+                                <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+                                <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0M6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15z"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                21</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.611 328.611" xml:space="preserve" width="20" height="20" fill="#056afc">
+                                <path d="M209.306 50.798a7.5 7.5 0 0 0-12.088 8.883c54.576 74.266 66.032 123.541 66.032 151.8 0 27.691-8.272 52.794-23.293 70.685-17.519 20.866-42.972 31.446-75.651 31.446-73.031 0-98.944-55.018-98.944-102.131 0-52.227 28.103-103.234 51.679-136.829 25.858-36.847 52.11-61.415 52.37-61.657a7.5 7.5 0 0 0-10.209-10.99c-1.11 1.031-27.497 25.698-54.254 63.765-24.901 35.428-54.586 89.465-54.586 145.71 0 31.062 9.673 59.599 27.236 80.353 20.361 24.061 50.345 36.779 86.708 36.779 36.794 0 66.926-12.726 87.139-36.801 17.286-20.588 26.806-49.117 26.806-80.33-.001-55.265-37.493-117.884-68.945-160.683z"></path><path d="m198.43 148.146-95.162 95.162a7.5 7.5 0 0 0 5.304 12.803 7.478 7.478 0 0 0 5.304-2.197l95.162-95.162a7.5 7.5 0 0 0 0-10.606 7.502 7.502 0 0 0-10.608 0zm-6.465 59.753c-13.292 0-24.106 10.814-24.106 24.106s10.814 24.106 24.106 24.106 24.106-10.814 24.106-24.106-10.814-24.106-24.106-24.106zm0 33.212c-5.021 0-9.106-4.085-9.106-9.106s4.085-9.106 9.106-9.106 9.106 4.085 9.106 9.106-4.085 9.106-9.106 9.106zm-66.787-46.949c13.292 0 24.106-10.814 24.106-24.106s-10.814-24.106-24.106-24.106-24.106 10.814-24.106 24.106 10.814 24.106 24.106 24.106zm0-33.213c5.021 0 9.106 4.085 9.106 9.106s-4.085 9.106-9.106 9.106-9.106-4.085-9.106-9.106 4.084-9.106 9.106-9.106z"></path></svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                54</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          Optimization
 
-                            0.24PF</p>
+                        </td>
+                      </tr>
+                     
+                      <tr class="text-gray-700 dark:text-gray-400">
+                        <td class="px-4 py-3 text-sm">
+                          <input
+                    type="checkbox"
+                    class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                  />
+                  <span class="ml-2">
+                    <span class="">SBI</span>
+                  </span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          Telangana
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          vainad
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          123456
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          10-01-2024
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          12:00 PM
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden w-4 h-4 mr-2 rounded-full md:block">
+                             <div class="offline"></div>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+                                offline</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fb3b1f" class="bi bi-thermometer" viewBox="0 0 16 16">
+                                <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+                                <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0M6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15z"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                23</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fb3b1f" class="bi bi-thermometer" viewBox="0 0 16 16">
+                                <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+                                <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0M6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15z"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                21</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          <div class="flex items-center text-sm">
+                            <!-- Avatar with inset shadow -->
+                            <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.611 328.611" xml:space="preserve" width="20" height="20" fill="#056afc">
+                                <path d="M209.306 50.798a7.5 7.5 0 0 0-12.088 8.883c54.576 74.266 66.032 123.541 66.032 151.8 0 27.691-8.272 52.794-23.293 70.685-17.519 20.866-42.972 31.446-75.651 31.446-73.031 0-98.944-55.018-98.944-102.131 0-52.227 28.103-103.234 51.679-136.829 25.858-36.847 52.11-61.415 52.37-61.657a7.5 7.5 0 0 0-10.209-10.99c-1.11 1.031-27.497 25.698-54.254 63.765-24.901 35.428-54.586 89.465-54.586 145.71 0 31.062 9.673 59.599 27.236 80.353 20.361 24.061 50.345 36.779 86.708 36.779 36.794 0 66.926-12.726 87.139-36.801 17.286-20.588 26.806-49.117 26.806-80.33-.001-55.265-37.493-117.884-68.945-160.683z"></path><path d="m198.43 148.146-95.162 95.162a7.5 7.5 0 0 0 5.304 12.803 7.478 7.478 0 0 0 5.304-2.197l95.162-95.162a7.5 7.5 0 0 0 0-10.606 7.502 7.502 0 0 0-10.608 0zm-6.465 59.753c-13.292 0-24.106 10.814-24.106 24.106s10.814 24.106 24.106 24.106 24.106-10.814 24.106-24.106-10.814-24.106-24.106-24.106zm0 33.212c-5.021 0-9.106-4.085-9.106-9.106s4.085-9.106 9.106-9.106 9.106 4.085 9.106 9.106-4.085 9.106-9.106 9.106zm-66.787-46.949c13.292 0 24.106-10.814 24.106-24.106s-10.814-24.106-24.106-24.106-24.106 10.814-24.106 24.106 10.814 24.106 24.106 24.106zm0-33.213c5.021 0 9.106 4.085 9.106 9.106s-4.085 9.106-9.106 9.106-9.106-4.085-9.106-9.106 4.084-9.106 9.106-9.106z"></path></svg>
+                            </div>
+                            <div>
+                              <p class="font-semibold">
+    
+                                54</p>
+    
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-4 py-3">
+                          Optimization
 
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">Hans Burger</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                     NGCS2023011001
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      6/10/2020
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-                            0.24KWH</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-
-                            0.24KVAH</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-
-                            0.24PF</p>
-
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">Hans Burger</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                     NGCS2023011002
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      6/10/2020
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-                            0.24KWH</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-
-                            0.24KVAH</p>
-
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
-                            loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">
-
-                            0.24PF</p>
-
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
             </div>
             <div
               class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
@@ -873,6 +1186,8 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="node_modules/@material-tailwind/html/scripts/tabs.js"></script>
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"></script>
 <script>
 
 $(function() {

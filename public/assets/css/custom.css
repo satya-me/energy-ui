@@ -111,3 +111,23 @@ width: 100%;
 .img_energy img{
  height: 50px;
 }
+
+.classtitle{
+  font-weight: bold;
+  color: #424242;
+  font-size: 18px;
+}
+
+.online{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #02b829;
+}
+
+.offline{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #fd2121; 
+}
