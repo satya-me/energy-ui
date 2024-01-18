@@ -464,10 +464,21 @@
                           </h4>
                           <select
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                            <option>1s</option>
-                            <option>5s</option>
-                            <option>1hr</option>
-                            <option>2hr</option>
+
+                            <option>Actual</option>
+                            <option>15s</option>
+                            <option>30s</option>
+                            <option>1 Minute</option>
+                            <option>5 Minutes</option>
+                            <option>10 Minutes</option>
+                            <option>15 Minutes</option>
+                            <option>30 Minutes</option>
+                            <option>1 Hour</option>
+                            <option>2 Hour</option>
+                            <option>4 Hour</option>
+                            <option>8 Hour</option>
+                            <option>12 Hour</option>
+
                           </select>
                         </div>
                         <div class="download_btn">
@@ -508,14 +519,18 @@
                             </th>
                             <th class="px-4 py-3">Ph1Current
                             </th>
+                            <th class="px-4 py-3">Ph2Voltage</th>
+                            <th class="px-4 py-3">Ph2Current</th>
+                            <th class="px-4 py-3">Ph3Voltage</th>
+                            <th class="px-4 py-3">Ph3Current</th>
                           </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                           <tr class="text-gray-700 dark:text-gray-400">
                             <td class="px-4 py-3 text-sm">
-                              <input type="checkbox"
+                              <!-- <input type="checkbox"
                                 class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" />
-                              <span class="ml-2">
+                              <span class="ml-2"> -->
                                 <span class="">SBI</span>
                               </span>
                             </td>
@@ -592,7 +607,7 @@
                                 <div>
                                   <p class="font-semibold">
 
-                                    0.24PF</p>
+                                    0.24V</p>
 
                                 </div>
                               </div>
@@ -608,7 +623,71 @@
                                 <div>
                                   <p class="font-semibold">
 
-                                    0.24PF</p>
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
 
                                 </div>
                               </div>
@@ -616,9 +695,9 @@
                           </tr>
                           <tr class="text-gray-700 dark:text-gray-400">
                             <td class="px-4 py-3 text-sm">
-                              <input type="checkbox"
+                              <!-- <input type="checkbox"
                                 class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" />
-                              <span class="ml-2">
+                              <span class="ml-2"> -->
                                 <span class="">SBI</span>
                               </span>
                             </td>
@@ -695,7 +774,142 @@
                                 <div>
                                   <p class="font-semibold">
 
-                                    0.24PF</p>
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="text-gray-700 dark:text-gray-400">
+                            <td class="px-4 py-3 text-sm">
+                              <!-- <input type="checkbox"
+                                class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" />
+                              <span class="ml-2"> -->
+                                <span class="">SBI</span>
+                              </span>
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                              Telangana
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                              vainad
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                              123456
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                              10-01-2024
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                              12:00 PM
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full"
+                                    src="assets/img/electricity-icon-png-4556 (1).png" alt="" loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+                                    0.24KWH</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24KVAH</p>
 
                                 </div>
                               </div>
@@ -712,6 +926,102 @@
                                   <p class="font-semibold">
 
                                     0.24PF</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24V</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-4 py-3">
+                              <div class="flex items-center text-sm">
+                                <!-- Avatar with inset shadow -->
+                                <div class="relative hidden  w-4 h-4 mr-2 rounded-full md:block">
+                                  <img class="object-cover w-full h-full rounded-full" src="assets/img/flash.png" alt=""
+                                    loading="lazy" />
+                                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                </div>
+                                <div>
+                                  <p class="font-semibold">
+
+                                    0.24A</p>
 
                                 </div>
                               </div>
@@ -735,10 +1045,19 @@
                           </h4>
                           <select
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                            <option>1s</option>
-                            <option>5s</option>
-                            <option>1hr</option>
-                            <option>2hr</option>
+                            <option>Actual</option>
+                            <option>15s</option>
+                            <option>30s</option>
+                            <option>1 Minute</option>
+                            <option>5 Minutes</option>
+                            <option>10 Minutes</option>
+                            <option>15 Minutes</option>
+                            <option>30 Minutes</option>
+                            <option>1 Hour</option>
+                            <option>2 Hour</option>
+                            <option>4 Hour</option>
+                            <option>8 Hour</option>
+                            <option>12 Hour</option>
                           </select>
                         </div>
 
