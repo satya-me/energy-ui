@@ -68,6 +68,23 @@ function data() {
       this.isModalOpen = false
       this.trapCleanup()
     },
+
+
+      // Modal 2
+      isModaltwo: false,
+      CloseModalTwo: null,
+      Modaltwo() {
+        this.isModaltwo = true
+        this.CloseModalTwo = focusTrap(document.querySelector('#modal'))
+      },
+      CloseModalTwo() {
+        this.isModaltwo = false
+        this.CloseModalTwo()
+      },
+
+
+    
+    
   }
   
 }
